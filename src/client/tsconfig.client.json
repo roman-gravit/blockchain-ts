@@ -1,0 +1,10 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"module": "ES2015",
+		//"moduleResolution": "Node",
+		"outDir": "../../public",
+		"inlineSources": true     // emit source TS and sourcemap in a single file. Not for production!
+	}
+
+}
