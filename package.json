@@ -2,19 +2,17 @@
   "name": "blockchain-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "tsc": "tsc"
+    "start": "serve",
+    "compileDeploy": "tsc && npm run deploy",
+    "deploy": "copyfiles -f src/browser/*.html src/browser/*.css dist",
+    "node": "tsc -p src/node/tsconfig.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/roman-gravit/blockchain-ts.git"
-  },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.5.5",
+    "copyfiles": "^2.4.1",
+    "serve": "^14.2.3",
     "typescript": "^5.6.2"
   }
 }
