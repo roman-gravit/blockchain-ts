@@ -21,11 +21,13 @@ wsServer.on('connection',
         wsClient.send('This message was pushed by the WebSocket server');
 
         wsClient.onerror = (error) =>
-            console.log(`The server received: ${error.message}`);
+            console.log(`onerror: The server received: ${error.message}`);
+
+        wsClient.onmessage = (message) =>  {
+            console.log(`onmessage: The server received: ${message.data}`);
+        };
     }
 );
-
-
 
 
 
